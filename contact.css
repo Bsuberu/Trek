@@ -1,0 +1,325 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1A5319;
+}
+
+header{
+    background-color: #aceaaa;
+    display: flex;
+    width: 100%;
+    height: 150px;
+    padding-top: 60px;
+    /* position: fixed; */
+
+}
+
+.heading{
+    width: 30%;
+}
+.menu{
+    width: 60%;
+}
+header .menu ul{
+    display: flex;
+    width: 100%;
+
+}
+ul li{
+    margin-right: 50px;
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: "Zilla Slab", serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+header a:hover{
+    text-decoration: underline;
+    color: #1A5319;
+    font-weight: bolder;
+    font-style: italic;
+    font-size:x-large;
+}
+#head{
+    background-color: #D6EFD8;
+    width: fit-content;
+    white-space: pre-wrap;
+    padding-bottom: 5px;
+}
+.menubutton button{
+    background-color:#1A5319; /* Button color */
+    color: black;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    /* padding: 10px 20px; */
+    margin-right: 50px;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+    text-align: center;
+}
+.menubutton button a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: "Zilla Slab", serif;
+}
+.menubutton button:hover {
+    background-color: #508D4E; /* Darker button color on hover */
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+}
+.body{
+    height: 800px;
+    /* padding-top: 250px; */
+    /* padding-left: 50px; */
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-style: normal;
+    /* text-align: center; */
+    display: flex;
+    
+}
+.body .body-1{
+    padding-top: 250px;
+    padding-left: 50px;
+    color: whitesmoke;
+}
+.body p{
+    text-align: left;
+}
+.body .body-1 h3{
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+.body .body-1 .icon{
+    text-align: left;
+}
+.body .body-1 .icon a {
+    text-decoration: none;
+    text-align: left;
+    margin: 0rem 20px;
+}
+      
+.body .body-1 .icon .fab {
+    font-size: 2rem;
+    color: #0cb906;
+    margin-top: 1rem;
+}
+      
+.body .body-1 .icon .fab:hover {
+    color:white;
+    transition:ease-out;
+    transition-duration: .3s;
+}
+.body .body-2{
+    width: 60%;
+    margin-left: 5rem;
+    margin-top: 0rem;
+}
+/* form .name{
+    display: flex;
+    padding-top: 10px;
+} */
+
+/* General form styling */
+form {
+    width: auto;
+    margin: 5rem;
+    padding-top: 20px;
+    font-family: 'Zilla Slab', serif;
+}
+
+/* Styling for form labels */
+form label {
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: snow;
+
+}
+
+/* Styling for input fields */
+form input[type="text"]{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    padding-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+form input[type="email"]{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    padding-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form textarea {
+    width: 50%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    
+}
+
+/* Focus effect for input fields */
+form input:focus,
+form textarea:focus {
+    border-color:rgb(109, 251, 0);
+    outline: none;
+    box-shadow: 0 0 8px gold;
+}
+
+
+/* Textarea styling */
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+input[type="submit"],
+input[type="reset"]{
+    background-color:#aceaaa;
+    color: black;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: 2px solid beige;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 60%;
+}
+
+input[type="reset"]:hover {
+    background-color:#031e02;
+    color: snow;
+    margin-top: 15px;
+    font-style: italic;
+    padding: 12px 20px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 60%;
+}
+input[type="submit"]:hover{
+    background-color:#031e02;
+    color: snow;
+    margin-top: 15px;
+    font-style: italic;
+    padding: 12px 20px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 60%;
+}
+
+/* Submit button styling */
+form .submit button {
+    background-color: #1A5319;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form .submit button:hover {
+    background-color: #508D4E;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .name {
+        flex-direction: column;
+    }
+
+    .name1, .name2 {
+        width: 100%;
+    }
+}
+
+
+
+
+footer{
+    margin-top: 4rem;
+    background-color: #aceaaa;
+    height: 250px;
+    padding-top: 2rem;
+}
+
+footer h3{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+footer .footer-icon{
+    text-align: center;
+}
+footer .footer-icon a {
+    text-decoration: none;
+    margin: 0rem 20px;
+}
+      
+footer .footer-icon .fab {
+    font-size: 2rem;
+    color: #3b5998;
+    margin-top: 1rem;
+}
+      
+footer .footer-icon .fab:hover {
+    color:#1A5319;
+    transition:ease-out;
+    transition-duration: .3s;
+}
+    
+footer .copywrite{
+    text-align: center;
+    margin-top: 1rem;
+}
+footer .policies{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem
+}
+footer .policies a{
+    color: darkgreen;
+    padding: 10px;
+}
+    

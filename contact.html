@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREK PRACTICE</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Whisper&family=Zilla+Slab:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="heading">
+            <a href="#">
+                <img src="./images/logo.jpg" alt="logo here">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Work With Us</a></li>
+                <li><a href="#free-resources">Free Resources</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Client Portal</a></li>
+            </ul>
+        </nav>
+        <div class="menubutton">
+            <button><a href="#">Get a quote</a></button>
+        </div>
+    </header>
+    <main>
+        <div class="body">
+            <div class="body-1">
+                <h3>Contact Us.</h3>
+                <p>Get in touch by completing the contact form</p>
+                <p>We aim to respnd within 48 hours</p>
+                <div class="icon">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="body-2">
+                <form method="post" action="">
+                    <h4 style="color: snow; text-align: center; padding-top: 20px;" >Please Fill Out the Form below</h4><br>
+                    <div>
+                        <label for="firstname"> First Name</label><br>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required><br>
+                    </div>
+                    <div>
+                        <label for="lastname">Last Name</label><br>
+                        <input type="text" id="sname" name="sname" placeholder="Last Name"><br>
+                    </div>
+
+                    <div>
+                        <label for="email">Email(required)</label><br>
+                        <input type="email" id="email" name="email" placeholder="please enter your email" required><br>
+                    </div>
+                    <div>
+                        <label for="help">Questions</label><br>
+                        <textarea cols="30" rows="3" name="text" placeholder="Type your Question here"required></textarea>
+                    </div>
+                    <input type="submit" id="submit" name="submit" value="Submit">
+                    <input type="reset" id="reset" name="reset" value="Clear fields">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h3>Lets Connect</h3>
+        <div class="footer-icon">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copywrite">
+            <p>&copy; <span id="year"></span> TREK CONSULTING.</p>
+        </div>
+        <div class="policies">
+            <a href="privacy.html">PRIVACY POLICY</a>
+            <a href="terms.html">TERMS OF USE</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            const firstName = document.getElementById('fname').value;
+            const lastName = document.getElementById('sname').value;
+            const email = document.getElementById('email').value;
+            const question = document.querySelector('textarea[name="text"]').value;
+
+            if (!firstName || !email || !question) {
+                alert('Please fill out all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    });
+    //to show a message when a condition is met
+    document.addEventListener('DOMContentLoaded', function () {
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('input', function () {
+            const message = document.getElementById('email-message');
+            if (emailInput.value.includes('@')) {
+                message.textContent = 'Valid email format.';
+                message.style.color = 'green';
+            } else {
+                message.textContent = 'Please enter a valid email address.';
+                message.style.color = 'red';
+            }
+        });
+    });
+    //to clear the field
+    document.addEventListener('DOMContentLoaded', function () {
+        const resetButton = document.getElementById('reset');
+        resetButton.addEventListener('click', function () {
+            const form = document.querySelector('form');
+            form.reset(); // Reset all fields
+        });
+    });
+    </script>
+</body>
+</html>
